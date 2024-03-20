@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 class Welcome extends StatefulWidget {
-  const Welcome({Key? key}) : super(key: key);
+  const Welcome({super.key});
 
   @override
   State<Welcome> createState() => _WelcomeState();
@@ -14,22 +14,32 @@ class _WelcomeState extends State<Welcome> {
       body: Center(
         child: Column(
           children: [
-            Text('Welcome',style: TextStyle(fontSize: 20),),
-            Text('Slash flutter provides extraordinary flutter tutorial',style: TextStyle(fontSize: 20),),
-            SizedBox(height: 200,),
-            ElevatedButton(onPressed: (){},
-
-                child: Text('LOGIN',style: TextStyle(color: Colors.blue)),
+            SizedBox(height: 50,),
+            Text('Welcome',style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,),),
+            SizedBox(height: 10,),
+            Text('Slash flutter provides extraordinary flutter tutorials.Do Subscribe!'),
+            SizedBox(height: 40,),
+            Image.network('image/flut.png',height: 200),
+            SizedBox(height: 50,),
+            ElevatedButton(
+              onPressed: () {},
+              // style: ElevatedButton.styleFrom(
+              //   primary: Colors.blue,
+              // ),
+              child: Text('Login',style: TextStyle(color: Colors.black)),
             ),
-            ElevatedButton(onPressed: (){},
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
-                ),
-                child: Text('sign up',style: TextStyle(color: Colors.white)),
+            SizedBox(height: 20,),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blue,
+              ),
+              child: Text('Sign Up',style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
       ),
+
     );
   }
 }
